@@ -1,0 +1,25 @@
+:root{
+  --bg: #E3E2DD;
+  --bg2: #000000;
+  --text: #030303;
+  --secondaryText: rgba(0, 0, 0, 0.863);
+  --secondary: #619098;
+  --primary: #B0B0B0;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  /* cursor: none; */
+}
+
+body{
+  width: 100%;
+  height: fit-content;
+  background-color: var(--bg);
+}
+

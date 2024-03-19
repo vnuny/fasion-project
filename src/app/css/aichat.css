@@ -1,0 +1,164 @@
+.AiChatBox{
+    width: 400px;
+    height: 550px;
+    background-color: black;
+    border: 5px solid rgb(36, 36, 36);
+    position: fixed;
+    border-radius: 10px;
+    bottom: 30px;
+    right: 30px;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+.AiChatBox ::-webkit-scrollbar{
+    width: 15px;
+    border-radius: 50px;
+    background-color: rgb(32, 32, 32);
+}
+.AiChatBox ::-webkit-scrollbar-thumb{
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+}
+.AiChatBox:hover ~ .cursor{
+    background-color: red;
+}
+.AiChatBox .header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.32);
+    padding: 10px 20px;
+}
+.AiChatBox .header .logo{
+    display: flex;
+    align-items: center;
+    color: white;
+    
+}
+.AiChatBox .header .logo img{
+    width: 50px;
+    height: fit-content;
+    object-fit: contain;
+    margin-right: 15px;
+}
+.AiChatBox .header .logo h3{
+    font-size: 1.2em;
+}
+.AiChatBox .header .close{
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+}
+.AiChatBox .header .close i {
+    font-size: 1.5em;
+    display: block;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+.AiChatBox .inputSec{
+    width: 95%;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: aliceblue;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.AiChatBox .inputSec input{
+    width: 85%;
+    height: 100%;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 0.9em;
+    padding: 0 20px;
+}
+
+.AiChatBox .inputSec button{
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+}
+
+.chatSection{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.chatSection .botMessage{
+    width: 100%;
+    display: flex;
+    padding: 20px 10px;
+}
+
+.chatSection .botMessage .left{
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 50px;
+    margin-right: 10px;
+}
+.chatSection .botMessage .right{
+    width: 100%;
+    max-width: 80%;
+    color: white;
+}
+.chatSection .botMessage .right h3{
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+.chatSection .botMessage .right p:nth-child(2){
+    max-width: 100%;
+    font-size: 1em;
+}
+.chatSection .botMessage .right p:nth-child(3){
+    font-size: 0.8em;
+    color: rgb(199, 199, 199);
+    text-align: end;
+    margin-top: 10px;
+    width: 100%;
+}
+.chatSection .botMessage .left img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50px;
+}
+.leftUser{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border: 1px solid white;
+}
+.avatarUser{
+    width: 60%;
+    height: 60%;
+    object-fit: contain !important;
+}
+
+
+@media screen and  (min-width:320px) and (max-width:480px){
+    .AiChatBox{
+        width: 90%;
+        bottom: 30px;
+        right: calc(50% - 45%);
+    }
+}
